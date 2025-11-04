@@ -22,3 +22,5 @@ int	ft_printf(const char *format, ...)
 
 //va_arg(list, type) => acces the next argument. Cant be call more than the number of arg pass. type is the type of arg to retrieve
 // va_end(list)  a la fin pour tt clean
+//
+// 

@@ -11,3 +11,18 @@
 /* ************************************************************************** */
 
 
+#include "libft.h"
+#include "ft_printf.h"
+
+void	ft_printf_hexa_upcase(unsigned int nbr)
+{
+	char *base;
+
+	base = "0123456789ABCDEF";
+	if (nbr >= 16)
+	{
+		ft_printf_hexa_lowcase(nbr / 16);
+	}
+	if (nbr < 16)
+		ft_putchar(base[nbr & 16]);
+}
