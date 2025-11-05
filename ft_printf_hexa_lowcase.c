@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:48:04 by fblanc            #+#    #+#             */
-/*   Updated: 2025/10/30 15:48:05 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/05 16:19:07 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,7 @@
 
 void	ft_printf_hexa_lowcase(unsigned int nbr)
 {
-	char *base;
-
-	base = "0123456789abcdef";
-	if (nbr >= 16)
-	{
-		ft_printf_hexa_lowcase(nbr / 16);
-	}
-	if (nbr < 16)
-		ft_putchar(base[nbr & 16]);
+	if (!nbr)
+		return ;
+	ft_puthexa_low(nbr);
 }
