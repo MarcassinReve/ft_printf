@@ -13,9 +13,13 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_printf_str(char *a)
+int	ft_printf_str(char *a)
 {
 	if (!a)
-		return ;
+	{
+		write (1, "(null)", 6);
+		return (6);
+	}
 	ft_putstr_fd(a, 1);
+	return (ft_strlen(a));
 }

@@ -13,9 +13,25 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_print_decimal(int a)
+int	ft_print_decimal(int a)
 {
+	int	total;
+	total = 0;
 	if (!a)
-		return;
+		return (total);
 	ft_putnbr_fd(a, 1);
+	if (a == 0)
+		return (1)
+	if (a < 0)
+	{
+		a *= -1;
+		total++;
+	}
+	while (a < 0)
+	{
+		a = a / 10;
+		total++;
+	}
+	return (total);
+	
 }

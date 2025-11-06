@@ -13,9 +13,9 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_printf_hexa_lowcase(unsigned int nbr)
+int	ft_printf_hexa_lowcase(unsigned int nbr)
 {
 	if (!nbr)
 		return ;
-	ft_puthexa_low(nbr);
+	return (ft_puthexa_low(nbr));
 }

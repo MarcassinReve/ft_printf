@@ -13,7 +13,8 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_printf_percent(void)
+int	ft_printf_percent(void)
 {
 	write (1, "%", 1);
+	return (1);
 }

@@ -13,9 +13,10 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_printf_char(int a)
+int	ft_printf_char(int a)
 {
 	if (!a)
-		return ;
+		return (0);
 	write(1, &a, 1);
+	return (1);
 }

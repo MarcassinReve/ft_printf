@@ -10,18 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_printf_hexa(void *p)
+static int	ft_puthexa_lowll(unsigned long long nbr)
+{
+	char	*base;
+	int	total;
+
+	total = 0;
+	base = "0123456789abcdef";
+	if (nbr >= 16)
+		total += ft_puthexa_lowll(nbr / 16);
+	ft_putchar(base[nbr % 16]);
+	total++;
+	return (total);
+}
+
+int	ft_printf_hexa(void *p)
 {
 	unsigned long	adrs;
-
+	int		total;
 	if(!p)
-		return ;
-	adrs = (unsigned long)p;
-	if (adrs = 0)
+		return (0);
+	adrs = (unsigned long long)p;
+	if (!adrs)
 	{
 		write(1, "(nil)", 5);
-		return ;
+		return (5);
 	}
 	write (1, "0x", 2);
-	ft_puthexa_low(adrs);
+	total = 2;
+	return(total + ft_puthexa_lowll(adrs);
 }
