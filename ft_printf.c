@@ -6,31 +6,36 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:50:37 by fblanc            #+#    #+#             */
-/*   Updated: 2025/11/05 16:42:49 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/06 18:08:39 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(const char *phrase, ...)
 {
 	int		total;
 	va_list	list;
 
 	total = 0;
-	va_start(list, format);
+	if (!phrase)
+		return (-1);
+	va_start(list, phrase);
 
-	if (format == "%" && *(format +1)) // trouver le %qqchose et lenvoyer au dispatcher
+	while (*phrase)
 	{
-		format++;
-		dispatcher(*format, &list);
+		if (*phrase == '%' && *(phrase + 1)) 
+		{
+			phrase++;
+			total += dispatcher(*phrase, &list);
+		}
+		else
+		{
+			total += write(1, phrase, 1);
+		}
+		phrase++;
 	}
 	va_end(list);
 	return (total);
-}
-
-//va_arg(list, type) => acces the next argument. Cant be call more than the number of arg pass. type is the type of arg to retrieve
-// va_end(list)  a la fin pour tt clean
-//
-// 
+} // Modifie les sous fonctions pour add l additif du nb de char write
