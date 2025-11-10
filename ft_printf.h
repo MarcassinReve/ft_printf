@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:28:31 by fblanc            #+#    #+#             */
-/*   Updated: 2025/10/30 14:50:11 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/10 14:43:18 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,14 @@
 # include <string.h>
 # include <ctype.h>
 # include <stdarg.h>
+
+int		ft_printf(const char *phrase, ...);
+int		ft_printf_char(int a);
+int		ft_printf_decimal(int a);
+int		ft_printf_dispatcher(char speci, va_list *list);
+int		ft_printf_hexa_lowcase(unsigned int nbr);
+int		ft_printf_hexa_upcase(unsigned int nbr);
+int		ft_printf_hexa_void(void *p);
+int		ft_printf_str(char *a);
 
 #endif

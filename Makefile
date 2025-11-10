@@ -6,15 +6,17 @@
 #    By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 14:26:18 by fblanc            #+#    #+#              #
-#    Updated: 2025/10/29 15:49:46 by fblanc           ###   ####lausanne.ch    #
+#    Updated: 2025/11/10 13:43:53 by fblanc           ###   ####lausanne.ch    #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
-SRC = 
-OBJ = $(SRC:.c=.o)
-LIBFT = ./libft/libft.a
-CC = cc
+NAME =	libftprintf.a
+SRC =	ft_printf.c ft_printf_char.c  ft_printf_decimal.c  ft_printf_dispatcher.c\
+		ft_printf_hexa_upcase.c  ft_printf_hexa_lowcase.c  ft_printf_void.c  ft_printf_int.c\
+		ft_printf_percent.c  ft_printf_str.c  ft_printf_unsigned_decimal.c
+OBJ =	$(SRC:.c=.o)
+LIBFT =	./libft/libft.a
+CC =	cc
 CFLAGS = -Wall -Wextra -Werror -I ./libft
 AR = ar rcs
 
@@ -24,14 +26,13 @@ $(LIBFT):
 	@$(MAKE) -C ./libft
 
 $(NAME): $(OBJ)
-	cc $(OBJ) $(LIBFT) $(CFLAGS) -o $(NAME)
-
+	$(AR) $(NAME) $(OBJ)
 clean:
 	@$(MAKE) clean -C ./libft
 	rm -f $(OBJ)
 
 fclean: clean
-	@$(MAKE) fclean -c ./libft
+	@$(MAKE) fclean -C ./libft
 	rm -f $(NAME)
 
 re: fclean all

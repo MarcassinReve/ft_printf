@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:50:37 by fblanc            #+#    #+#             */
-/*   Updated: 2025/11/06 18:08:39 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/10 17:32:41 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_printf(const char *phrase, ...)
 {
 	int		total;
 	va_list	list;
+	int	verif;
 
 	total = 0;
 	if (!phrase)
@@ -28,7 +29,10 @@ int	ft_printf(const char *phrase, ...)
 		if (*phrase == '%' && *(phrase + 1)) 
 		{
 			phrase++;
-			total += dispatcher(*phrase, &list);
+			verif = ft_printf_dispatcher(*phrase, &list);
+			if (verif == -1)
+				return(write(1, "(null)", 6));
+			total += verif;
 		}
 		else
 		{
@@ -38,4 +42,4 @@ int	ft_printf(const char *phrase, ...)
 	}
 	va_end(list);
 	return (total);
-} // Modifie les sous fonctions pour add l additif du nb de char write
+}

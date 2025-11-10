@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:48:49 by fblanc            #+#    #+#             */
-/*   Updated: 2025/11/05 16:00:43 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/10 16:32:26 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_printf_hexa_upcase(unsigned int nbr)
+int	ft_printf_hexa_upcase(unsigned int nbr)
 {
 	if (!nbr)
-		return ;
-	ft_puthexa_low(unsigned int nbr)
+		return (-1);
+	ft_puthexa_upcase(unsigned int nbr)
 }

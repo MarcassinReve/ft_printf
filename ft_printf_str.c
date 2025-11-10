@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:44:58 by fblanc            #+#    #+#             */
-/*   Updated: 2025/10/30 16:00:28 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/10 17:21:53 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 
 int	ft_printf_str(char *a)
 {
+	int	value;
 	if (!a)
-	{
-		write (1, "(null)", 6);
-		return (6);
-	}
-	ft_putstr_fd(a, 1);
-	return (ft_strlen(a));
-}
+		return(write (1, "(null)", 6));
+	value = ft_putstr(a);
+	return (value);

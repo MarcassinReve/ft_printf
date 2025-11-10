@@ -6,37 +6,48 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:46:40 by fblanc            #+#    #+#             */
-/*   Updated: 2025/11/05 16:22:37 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/11/10 16:29:03 by fblanc           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
 static int	ft_puthexa_lowll(unsigned long long nbr)
 {
-	char	*base;
-	int	total;
+	const char	*base;
+	int			total;
+	int			value;
 
 	total = 0;
 	base = "0123456789abcdef";
 	if (nbr >= 16)
-		total += ft_puthexa_lowll(nbr / 16);
-	ft_putchar(base[nbr % 16]);
-	total++;
+	{
+		value = ft_puthexa_lowll(nbr / 16);
+		if(value == -1)
+			return (-1);
+		total += value;
+	}
+	value = ft_putchar(base[nbr % 16]);
+	if (value == -1)
+			return (-1);
+	total += value;
 	return (total);
 }
 
-int	ft_printf_hexa(void *p)
+int	ft_printf_hexa_void(void *p)
 {
-	unsigned long	adrs;
-	int		total;
-	if(!p)
-		return (0);
-	adrs = (unsigned long long)p;
-	if (!adrs)
+	unsigned long long	adrs;
+	int					total;
+	int					value;
+
+	if (!p)
 	{
-		write(1, "(nil)", 5);
-		return (5);
+		value = write(1, "(nil)", 5);
+		return (value);
 	}
-	write (1, "0x", 2);
-	total = 2;
-	return(total + ft_puthexa_lowll(adrs);
+	adrs = (unsigned long long)p;
+	total = 0;
+	value = write (1, "0x", 2);
+	if (value == -1)
+		return (-1);
+	total += 2;
+	return(total + ft_puthexa_lowll(adrs));
 }
