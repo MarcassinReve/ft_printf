@@ -12,7 +12,7 @@
 
 NAME =	libftprintf.a
 SRC =	ft_printf.c ft_printf_char.c  ft_printf_decimal.c  ft_printf_dispatcher.c\
-		ft_printf_hexa_upcase.c  ft_printf_hexa_lowcase.c  ft_printf_void.c  ft_printf_int.c\
+		ft_printf_hexa_upcase.c ft_printf_hexa_void.c ft_printf_hexa_lowcase.c ft_printf_int.c\
 		ft_printf_percent.c  ft_printf_str.c  ft_printf_unsigned_decimal.c
 OBJ =	$(SRC:.c=.o)
 LIBFT =	./libft/libft.a

@@ -15,7 +15,5 @@
 
 int	ft_printf_hexa_lowcase(unsigned int nbr)
 {
-	if (!nbr)
-		return (-1);
 	return (ft_puthexa_low(nbr));
 }

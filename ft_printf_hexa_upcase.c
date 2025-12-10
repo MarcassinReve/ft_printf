@@ -16,7 +16,5 @@
 
 int	ft_printf_hexa_upcase(unsigned int nbr)
 {
-	if (!nbr)
-		return (-1);
-	ft_puthexa_upcase(unsigned int nbr)
+	return(ft_puthexa_up(nbr));
 }

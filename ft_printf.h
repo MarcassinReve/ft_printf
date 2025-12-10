@@ -28,5 +28,6 @@ int		ft_printf_hexa_lowcase(unsigned int nbr);
 int		ft_printf_hexa_upcase(unsigned int nbr);
 int		ft_printf_hexa_void(void *p);
 int		ft_printf_str(char *a);
+int     ft_printf_unsigned_decimal(unsigned int a);
 
 #endif

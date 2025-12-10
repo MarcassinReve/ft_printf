@@ -27,7 +27,7 @@ int	ft_printf_dispatcher(char speci, va_list *list)
 	if (speci == 'X')
 		return(ft_printf_hexa_upcase(va_arg(*list, unsigned int)));
 	if (speci == 'u')
-		return(ft_printf_ // Il me manque le %u en unsigned decimal.;
+		return(ft_printf_unsigned_decimal(va_arg(*list, unsigned int)));
 	if (speci == '%')
 		return(ft_printf_char('%'));
 	return (ft_printf_char('%') + ft_printf_char(speci)); // faire une sous fonction speci pour propager l erreur -1 correctement

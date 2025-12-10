@@ -13,9 +13,7 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_print_double(float a)
+int	ft_printf_unsigned_decimal(unsigned int a)
 {
-	if (!a)
-		return;
-	ft_putnbr_unsigned_fd(a, 1);
+	return(ft_putnbr_unsigned_fd(a, 1));
 }

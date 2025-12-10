@@ -20,3 +20,4 @@ int	ft_printf_str(char *a)
 		return(write (1, "(null)", 6));
 	value = ft_putstr(a);
 	return (value);
+}
