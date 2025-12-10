@@ -1,8 +1,9 @@
 #include "ft_printf.h"
 #include <stdio.h>
-
+	/*
 int	main(void)
 {
+
 	int	ft_ret;
 	int	printf_ret;
 
@@ -37,6 +38,31 @@ int	main(void)
 	ft_ret = ft_printf("Pointer: %p\n", &ft_ret);
 	printf_ret = printf("Pointer: %p\n", &ft_ret);
 	printf("ft_printf return = %d | printf return = %d\n", ft_ret, printf_ret);
+
+
+	return (0);
+}
+*/
+
+int	main(void)
+{
+	int	a;
+
+	ft_printf("Edge d: %d\n", -2147483648);
+	printf("Edge d: %d\n", -2147483648);
+
+	ft_printf("Zero u: %u\n", 0u);
+	printf("Zero u: %u\n", 0u);
+
+	ft_printf("Null str: %s\n", NULL);
+	printf("Null str: %s\n", NULL);
+
+	a = 42;
+	ft_printf("Null ptr: %p\n", NULL);
+	printf("Null ptr: %p\n", NULL);
+
+	ft_printf("Real ptr: %p\n", &a);
+	printf("Real ptr: %p\n", &a);
 
 	return (0);
 }

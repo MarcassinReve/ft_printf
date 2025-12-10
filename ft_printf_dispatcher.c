@@ -20,7 +20,7 @@ int	ft_printf_dispatcher(char speci, va_list *list)
 		return(ft_printf_str(va_arg(*list, char *)));
 	if (speci == 'p')
 		return(ft_printf_hexa_void(va_arg(*list, void *)));
-	if (speci == 'd' || speci == 'i')
+	if (speci == 'd' || speci == 'i')    // Return bien mais mauvais resultat. A fixer 
 		return(ft_printf_decimal(va_arg(*list, int)));
 	if (speci == 'x')
 		return(ft_printf_hexa_lowcase(va_arg(*list, unsigned int)));

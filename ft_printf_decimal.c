@@ -15,23 +15,5 @@
 
 int	ft_printf_decimal(int a)
 {
-	int	total;
-	total = 0;
-	if (!a)
-		return (total);
-	ft_putnbr_fd(a, 1);
-	if (a == 0)
-		return (1);
-	if (a < 0)
-	{
-		a *= -1;
-		total++;
-	}
-	while (a < 0)
-	{
-		a = a / 10;
-		total++;
-	}
-	return (total);
-	
+	return(ft_putnbr_fd(a, 1));
 }
