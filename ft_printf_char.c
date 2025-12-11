@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:45:24 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 15:13:30 by fblanc         ########   odam.nl        */
+/*   Updated: 2025/12/11 15:47:26 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_printf_char(int a)
 {
-	if (!a)
-		return (-1);
 	return (write(1, &a, 1));
 }
