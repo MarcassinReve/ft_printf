@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_percent.c                                 :+:    :+:           */
+/*   ft_putchar.c                                        :+:    :+:           */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 15:49:20 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 15:14:46 by fblanc         ########   odam.nl        */
+/*   Created: 2025/11/10 15:15:31 by fblanc            #+#    #+#             */
+/*   Updated: 2025/12/11 15:17:15 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_percent(void)
+int	ft_putchar(char a)
 {
-	write (1, "%", 1);
+	ssize_t	w;
+
+	w = write(1, &a, 1);
+	if (w < 0)
+		return (-1);
 	return (1);
 }

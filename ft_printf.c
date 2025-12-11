@@ -6,11 +6,10 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:50:37 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 14:30:45 by fblanc         ########   odam.nl        */
+/*   Updated: 2025/12/11 15:15:34 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
 
 static int	handle_conversion(const char **phrase, va_list *list, int *total)

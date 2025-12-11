@@ -6,7 +6,7 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:28:31 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 14:31:09 by fblanc         ########   odam.nl        */
+/*   Updated: 2025/12/11 15:31:50 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,12 @@ int		ft_printf_hexa_upcase(unsigned int nbr);
 int		ft_printf_hexa_void(void *p);
 int		ft_printf_str(char *a);
 int		ft_printf_unsigned_decimal(unsigned int a);
+int		ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_unsigned_fd(unsigned int nbr, int fd);
+int		ft_putstr(char *s);
+int		ft_puthexa_low(unsigned int nbr);
+int		ft_putchar(char a);
+int		ft_puthexa_up(unsigned int nbr);
+void	ft_putchar_fd(char c, int fd);
 
 #endif

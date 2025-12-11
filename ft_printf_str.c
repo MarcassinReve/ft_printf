@@ -6,11 +6,10 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:44:58 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 14:00:12 by fblanc         ########   odam.nl        */
+/*   Updated: 2025/12/11 15:14:56 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
 
 int	ft_printf_str(char *a)

@@ -6,11 +6,10 @@
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:46:40 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 13:55:27 by fblanc         ########   odam.nl        */
+/*   Updated: 2025/12/11 15:14:26 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
 #include "ft_printf.h"
 
 static int	ft_puthexa_lowll(unsigned long long nbr)

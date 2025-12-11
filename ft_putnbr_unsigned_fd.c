@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_percent.c                                 :+:    :+:           */
+/*   ft_putnbr_unsigned_fd.c                             :+:    :+:           */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 15:49:20 by fblanc            #+#    #+#             */
-/*   Updated: 2025/12/11 15:14:46 by fblanc         ########   odam.nl        */
+/*   Created: 2025/10/30 16:58:00 by fblanc            #+#    #+#             */
+/*   Updated: 2025/12/11 15:19:11 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_percent(void)
+int	ft_putnbr_unsigned_fd(unsigned int nbr, int fd)
 {
-	write (1, "%", 1);
-	return (1);
+	int	count;
+
+	count = 0;
+	if (nbr >= 10)
+		count = ft_putnbr_unsigned_fd(nbr / 10, fd);
+	ft_putchar_fd((nbr % 10) + '0', fd);
+	count += 1;
+	return (count);
 }
