@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                         :+:    :+:           */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:28:31 by fblanc            #+#    #+#             */
-/*   Updated: 2025/11/10 14:43:18 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/12/11 14:31:09 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int		ft_printf_hexa_lowcase(unsigned int nbr);
 int		ft_printf_hexa_upcase(unsigned int nbr);
 int		ft_printf_hexa_void(void *p);
 int		ft_printf_str(char *a);
-int     ft_printf_unsigned_decimal(unsigned int a);
+int		ft_printf_unsigned_decimal(unsigned int a);
 
 #endif

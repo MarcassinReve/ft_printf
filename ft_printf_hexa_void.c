@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_hexa_void.c                              :+:      :+:    :+:   */
+/*   ft_printf_hexa_void.c                               :+:    :+:           */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fblanc <fblanc@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:46:40 by fblanc            #+#    #+#             */
-/*   Updated: 2025/11/10 16:29:03 by fblanc           ###   ####lausanne.ch   */
+/*   Updated: 2025/12/11 13:55:27 by fblanc         ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ static int	ft_puthexa_lowll(unsigned long long nbr)
 	if (nbr >= 16)
 	{
 		value = ft_puthexa_lowll(nbr / 16);
-		if(value == -1)
+		if (value == -1)
 			return (-1);
 		total += value;
 	}
 	value = ft_putchar(base[nbr % 16]);
 	if (value == -1)
-			return (-1);
+		return (-1);
 	total += value;
 	return (total);
 }
@@ -52,5 +52,5 @@ int	ft_printf_hexa_void(void *p)
 	if (value == -1)
 		return (-1);
 	total += 2;
-	return(total + ft_puthexa_lowll(adrs));
+	return (total + ft_puthexa_lowll(adrs));
 }
